@@ -1,0 +1,1 @@
+export { FiraSans } from './firaSans';
