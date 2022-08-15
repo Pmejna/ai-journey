@@ -1,11 +1,10 @@
 import type { FunctionComponent } from "react";
+
+import FourOFourView from "views/404/404View";
  
 const FourOFour: FunctionComponent = () => {
-    return ( 
-        <>
-            <h1>Sorry, page not found</h1>
-            <h2>Error 404</h2>
-        </>
+    return (
+        <FourOFourView/>
      );
 }
  
