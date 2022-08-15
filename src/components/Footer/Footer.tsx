@@ -5,7 +5,7 @@ import { StyledFooter } from "./Footer.styles";
 const Footer: FunctionComponent = () => {
     return ( 
         <StyledFooter>
-            <h1>Footer test</h1>
+            <h3>AI Journey</h3>
         </StyledFooter> 
      );
 }
