@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 
 export const global = css`
   body {
+    font-family: 'Fira Sans', sans-serif;
   }
   #__next {
     overflow-x: hidden;
