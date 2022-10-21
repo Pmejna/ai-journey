@@ -3,7 +3,7 @@ import type { GetStaticProps, NextPage } from "next";
 import { apolloClient } from "lib/apolloClient";
 
 import { homePageQuery } from "queries/HomePage";
-import HomeView from "views/HomeView/HomeView";
+import { HomeView } from "views/HomeView/HomeView";
 
 export interface HomeProps {
   pageData: any;
