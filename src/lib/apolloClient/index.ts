@@ -23,7 +23,7 @@ const createAuthMiddleware = () => {
 
 export const createApolloClient = () => {
   const spaceId = process.env[`CONTENTFUL_SPACE_ID`];
-  const environment = process.env[`CONTENTFUL_MAIN_ENVIRONMENT`];
+  const environment = process.env[`CONTENTFUL_MAIN_ENVIROMENT`];
 
   const contentfulUrl = `https://graphql.contentful.com/content/v1/spaces/${spaceId}/environments/${environment}`;
   const pageUrl = hasWindow ? localUrl : contentfulUrl;
