@@ -1,11 +1,35 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from "next";
 
-import { StyledTitle } from 'components/TestComponent/TestComponents.styles';
+import { apolloClient } from "lib/apolloClient";
 
-const Home: NextPage = () => {
-  return (
-      <StyledTitle>Test</StyledTitle>
-  )
+import type { HomePage } from "schema/generated";
+
+import { homePageQuery } from "queries/HomePage";
+
+import { HomeView } from "views/HomeView/HomeView";
+
+export type HomePageData = Required<HomePage>;
+export interface HomeProps {
+  pageData: HomePageData;
 }
 
-export default Home
+const Home: NextPage<HomeProps> = ({ pageData }) => {
+  return <HomeView pageData={pageData} />;
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await apolloClient
+    .query({
+      query: homePageQuery,
+    })
+    .then((res) => res);
+
+  const pageData = data.homePage;
+  return {
+    props: {
+      pageData,
+    },
+  };
+};
+
+export default Home;
