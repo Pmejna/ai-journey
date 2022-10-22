@@ -3,6 +3,11 @@ name: pr lint & unit-tests
 on:
   pull_request:
 
+env:
+  CONTENTFUL_MAIN_ENVIROMENT: ${{ secrets.CONTENTFUL_MAIN_ENVIROMENT }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+
 jobs:
   linting:
     name: Run linting
