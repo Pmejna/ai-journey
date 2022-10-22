@@ -54,5 +54,7 @@ jobs:
         run: npm list
       - name: Install dependencies
         run: npm install
+      - name: Generate Contentful GraphQL types
+        run: npm run codegen
       - name: Run tests
         run: npm run test
