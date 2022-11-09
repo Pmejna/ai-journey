@@ -1,13 +1,25 @@
-import type { FC, ReactNode } from "react";
+import type { ElementType, FC, ReactNode } from "react";
 
 import type { Theme } from "@emotion/react";
 
-interface TypographyProps {
-  tag: HTMLElement;
-  variant: keyof Theme["typography"];
-  children: ReactNode;
+import { TypographyStyled } from "./Typography.styles";
+
+export interface TypographyProps {
+  tag?: ElementType;
+  variant?: keyof Theme["typography"];
+  children?: ReactNode;
+  color: string;
 }
 
-export const Typography: FC<TypographyProps> = () => {
-  return <Typography>{}</Typography>;
+export const Typography: FC<TypographyProps> = ({
+  children,
+  tag,
+  variant,
+  color,
+}) => {
+  return (
+    <TypographyStyled as={tag} variant={variant} color={color}>
+      {children}
+    </TypographyStyled>
+  );
 };
