@@ -6,15 +6,15 @@ import { TypographyStyled } from "./Typography.styles";
 
 export interface TypographyProps {
   tag?: ElementType;
-  variant?: keyof Theme["typography"];
-  children?: ReactNode;
+  variant: keyof Theme["typography"];
+  children: ReactNode;
   color: string;
 }
 
 export const Typography: FC<TypographyProps> = ({
   children,
   tag,
-  variant,
+  variant = "pLarge",
   color,
 }) => {
   return (
