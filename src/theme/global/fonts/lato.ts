@@ -1,3 +1,5 @@
+import { css } from '@emotion/react';
+
 export const Lato = css`
   @font-face {
     font-family: "Lato";

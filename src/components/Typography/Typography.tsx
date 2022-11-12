@@ -8,7 +8,7 @@ export interface TypographyProps {
   tag?: ElementType;
   variant: keyof Theme["typography"];
   children: ReactNode;
-  color: string;
+  color?: string;
 }
 
 export const Typography: FC<TypographyProps> = ({
