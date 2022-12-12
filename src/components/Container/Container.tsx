@@ -5,19 +5,26 @@ import type { Size } from "./Container.styles";
 
 interface ContainerProps {
   children: ReactNode;
-  size: Size;
+  centered?: boolean;
   paddings?: string;
+  size: Size;
   tag: ElementType;
 }
 
 export const Container: FC<ContainerProps> = ({
-  tag,
-  size = "full",
-  paddings,
   children,
+  centered = false,
+  paddings,
+  size = "full",
+  tag,
 }) => {
   return (
-    <StyledContainer as={tag} size={size} paddings={paddings}>
+    <StyledContainer
+      as={tag}
+      size={size}
+      paddings={paddings}
+      centered={centered}
+    >
       {children}
     </StyledContainer>
   );

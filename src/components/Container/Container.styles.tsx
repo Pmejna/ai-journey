@@ -4,8 +4,9 @@ import styled from "@emotion/styled";
 export type Size = "sm" | "md" | "lg" | "xl" | "full";
 
 export interface ContainerParams {
-  size: Size;
+  centered?: boolean;
   paddings?: string;
+  size: Size;
 }
 
 export const containerSizes: Record<Size, string> = {
@@ -26,4 +27,5 @@ export const StyledContainer = styled.div<ContainerParams>`
     `}
 
   padding: ${({ paddings }) => paddings};
+  ${({ centered }) => centered && "margin: 0 auto;"}
 `;
