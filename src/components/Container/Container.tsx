@@ -7,8 +7,8 @@ interface ContainerProps {
   children: ReactNode;
   centered?: boolean;
   paddings?: string;
-  size: Size;
-  tag: ElementType;
+  size?: Size;
+  tag?: ElementType;
 }
 
 export const Container: FC<ContainerProps> = ({
