@@ -29,6 +29,7 @@ export const colors = {
     citrine: "#f9c700",
     orange: "#ff8c00",
     roseviolet: "#ff008c",
+    "dark-blue": "#020223",
   },
 };
 
