@@ -11,6 +11,6 @@ describe("Button", () => {
     const { getByText } = render(
       <Button variant="primary">{buttonText}</Button>
     );
-    expect(getByText(buttonText)).toHaveStyle("background-color: #8c8cf2");
+    expect(getByText(buttonText)).toHaveStyle("background-color: #5c5cf2");
   });
 });
