@@ -1,3 +1,5 @@
+import { Canvas } from "@react-three/fiber";
+
 import { Button, Container, Typography } from "components";
 
 import { MainLayout } from "layouts/MainLayout/MainLayout";
@@ -12,6 +14,11 @@ export const HomeView = ({ pageData }: HomeProps) => {
     <MainLayout>
       <Container centered size="full">
         <StyledHero>
+          <Canvas>
+            <mesh>
+              <boxGeometry args={[1, 1, 1]} />
+            </mesh>
+          </Canvas>
           <Typography tag="h1" variant="h1">
             {heading}
           </Typography>
